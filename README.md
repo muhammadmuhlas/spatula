@@ -1,6 +1,7 @@
 ## Spatula
 
 [![asciicast](https://asciinema.org/a/376187.svg)](https://asciinema.org/a/376187)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmuhammadmuhlas%2Fspatula.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmuhammadmuhlas%2Fspatula?ref=badge_shield)
 
 A simple tool to help your development workflow with jira and bitbucket
 
@@ -41,3 +42,7 @@ https://github.com/spf13/viper
 https://github.com/alexeyco/simpletable
 
 https://github.com/AlecAivazis/survey
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmuhammadmuhlas%2Fspatula.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmuhammadmuhlas%2Fspatula?ref=badge_large)

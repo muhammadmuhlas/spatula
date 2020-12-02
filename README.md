@@ -1,6 +1,6 @@
 ## Spatula
 
-[![asciicast](https://asciinema.org/a/sQEN6HqdyGE2gE5uk0z6iWStt.svg)](https://asciinema.org/a/sQEN6HqdyGE2gE5uk0z6iWStt)
+[![asciicast](https://asciinema.org/a/376187.svg)](https://asciinema.org/a/376187)
 
 A simple tool to help your development workflow with jira and bitbucket
 

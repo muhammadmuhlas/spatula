@@ -1,8 +1,10 @@
 ## Spatula
 
+[![asciicast](https://asciinema.org/a/sQEN6HqdyGE2gE5uk0z6iWStt.svg)](https://asciinema.org/a/sQEN6HqdyGE2gE5uk0z6iWStt)
+
 A simple tool to help your development workflow with jira and bitbucket
 
-### Features:
+### Highlights:
 1. Automatic release note generation
 2. Project Management Tool integration (currently: jira. Other PMT is open for contribution)
 3. Source Code Management integration (currently: bitbucket. Other SCM is open for contribution)

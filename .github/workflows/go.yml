@@ -30,7 +30,7 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v ./...
+      run: VERSION=$GITHUB_SHA make build
 
     - name: Test
       run: go test -v ./...
@@ -39,3 +39,4 @@ jobs:
       uses: actions/upload-artifact@v2.2.1
       with:
         name: spatula-*
+        path: .

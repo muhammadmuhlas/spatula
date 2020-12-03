@@ -1,15 +1,13 @@
 on:
   push:
-    branches:
-      - master
     tags:
     - 'v*'
 
-name: Release Draft
+name: Release
 
 jobs:
   build:
-    name: Upload Release Asset
+    name: Create Release
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x

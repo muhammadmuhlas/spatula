@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - master
+    tags:
+    - 'v*'
+
+name: Release Draft
+
+jobs:
+  build:
+    name: Upload Release Asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.13
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get dependencies
+        run: |
+          go get -v -t -d ./...
+      - name: Build project
+        run: |
+          VERSION=${{ github.ref }} make release
+      - name: Create Release
+        uses: actions/checkout@v2
+        run: |
+          set -x
+          assets=()
+          for asset in ./spatula-*; do
+            assets+=("-a" "$asset")
+          done
+          tag_name="${GITHUB_REF##*/}"
+          hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -30,7 +30,7 @@ jobs:
         fi
 
     - name: Build
-      run: VERSION=$GITHUB_SHA make build
+      run: VERSION=$GITHUB_SHA make release
 
     - name: Test
       run: go test -v ./...

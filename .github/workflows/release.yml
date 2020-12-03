@@ -21,7 +21,7 @@ jobs:
           go get -v -t -d ./...
       - name: Build project
         run: |
-          VERSION=${{ github.ref }} make release
+          VERSION=${GITHUB_REF##*/} make release
       - name: Create Release
         run: |
           set -x
@@ -30,6 +30,7 @@ jobs:
             assets+=("-a" "$asset")
           done
           tag_name="${GITHUB_REF##*/}"
+          echo "$tag_name"
           hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

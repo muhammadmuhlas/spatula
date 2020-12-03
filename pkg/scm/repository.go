@@ -46,7 +46,7 @@ func (p *SCM) CreateBranch(owner, repository, name, source string) (rb working.B
 	apiEndPoint := fmt.Sprintf("https://api.bitbucket.org/2.0/repositories/%s/%s/refs/branches", owner, repository)
 	request := gorequest.New().Retry(5, 5 * time.Second, http.StatusTooManyRequests, http.StatusBadGateway).SetBasicAuth(viper.GetString("scm.credential.username"), viper.GetString("scm.credential.password"))
 	_, _, errs := request.Post(apiEndPoint).Send(payload).EndStruct(&rb)
-	if len(errs) > 0 { panic(errs)}
+	if len(errs) > 0 { return rb, errs[0] }
 	return
 }
 

@@ -76,7 +76,7 @@ func (i *Issue) GetDevelopmentInfo(wg *sync.WaitGroup) (err error) {
 	request := gorequest.New().Timeout(60*time.Second).SetBasicAuth(viper.GetString("pmt.credential.username"), viper.GetString("pmt.credential.password"))
 	_, _, errs := request.Get(apiEndPoint).EndStruct(&i.DevelopmentInfo)
 	if len(errs) > 0 {
-		panic(errs)
+		return errs[0]
 	}
 	return
 }

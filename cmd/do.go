@@ -173,16 +173,14 @@ var doCmd = &cobra.Command{
 						Owner: viper.GetString("scm.credential.workspace"),
 					}
 					task.Title = task.Source.Branch + " to " + task.Destination.Branch
-					// DEBUG
-					task.Destination.Repository = "a"
 
 					s.Prefix = fmt.Sprintf("Creating Pull Request On %s \"%s\" ", formatter.Red(task.Destination.Repository), formatter.Blue(task.Title))
 					s.Start()
 					scm, err := scm.CreatePullRequest(*task)
 					if err != nil {
 						s.Stop()
-						fmt.Println(fmt.Sprintf("Pull Request Can't Be Opened!. No Diff %s - %s", formatter.Red(task.Destination.Branch), formatter.Red(task.Source.Branch)))
-						panic(err)
+						fmt.Println(fmt.Sprintf("Pull Request Can't Be Opened!. No Diff %s - %s (%s)", formatter.Red(task.Source.Branch), formatter.Red(task.Destination.Branch), err.Error()))
+						return err
 					}
 					s.Stop()
 					fmt.Println(fmt.Sprintf("Pull Request #%d Opened On %s \"%s\" %s", int(scm.(map[string]interface{})["id"].(float64)), formatter.Red(task.Destination.Repository), formatter.Blue(task.Title), scm.(map[string]interface{})["links"].(map[string]interface{})["html"].(map[string]interface{})["href"].(string)))

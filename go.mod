@@ -3,7 +3,7 @@ module github.com/muhammadmuhlas/spatula
 go 1.15
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.2.3
+	github.com/AlecAivazis/survey/v2 v2.2.4
 	github.com/alexeyco/simpletable v0.0.0-20200730140406-5bb24159ccfb
 	github.com/andygrunwald/go-jira v1.13.0
 	github.com/briandowns/spinner v1.11.1

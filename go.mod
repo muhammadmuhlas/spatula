@@ -13,7 +13,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/parnurzeal/gorequest v0.2.16
-	github.com/spf13/cobra v1.1.1
+	github.com/spf13/cobra v1.1.3
 	github.com/spf13/viper v1.7.1
 	moul.io/http2curl v1.0.0 // indirect
 )

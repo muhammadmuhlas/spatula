@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: gomod
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "22:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: github.com/AlecAivazis/survey/v2
+    versions:
+    - 2.2.7
+    - 2.2.8
+  - dependency-name: github.com/ktrysmt/go-bitbucket
+    versions:
+    - 0.9.8

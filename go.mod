@@ -9,7 +9,7 @@ require (
 	github.com/briandowns/spinner v1.12.0
 	github.com/elazarl/goproxy v0.0.0-20201021153353-00ad82a08272 // indirect
 	github.com/jinzhu/copier v0.0.0-20201025035756-632e723a6687
-	github.com/ktrysmt/go-bitbucket v0.9.0
+	github.com/ktrysmt/go-bitbucket v0.9.7
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/parnurzeal/gorequest v0.2.16

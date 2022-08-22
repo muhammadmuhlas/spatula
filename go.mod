@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/AlecAivazis/survey/v2 v2.2.4
 	github.com/alexeyco/simpletable v0.0.0-20200730140406-5bb24159ccfb
-	github.com/andygrunwald/go-jira v1.13.0
+	github.com/andygrunwald/go-jira v1.16.0
 	github.com/briandowns/spinner v1.12.0
 	github.com/elazarl/goproxy v0.0.0-20201021153353-00ad82a08272 // indirect
 	github.com/jinzhu/copier v0.0.0-20201025035756-632e723a6687
